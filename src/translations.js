@@ -27,7 +27,7 @@ export const T = {
     docTip: "Document tip", official: "Official website",
     noMatches: "No direct central-scheme matches found for this profile. Try adjusting details, or explore all schemes at myscheme.gov.in.",
     askTitle: "Have a question? Ask Sahayak",
-    askPlaceholder: "e.g. Where do I get an income certificate?",
+    askPlaceholder: "e.g. How do I apply for these schemes?",
     send: "Ask", back: "Start over",
     disclaimer: "Scheme rules change over time. Always verify on the official portal before applying. This tool gives guidance, not a government decision.",
     aiBadge: "AI-personalised guidance", engineBadge: "eligibility checked by rules engine"
@@ -59,7 +59,7 @@ export const T = {
     docTip: "दस्तावेज़ सुझाव", official: "आधिकारिक वेबसाइट",
     noMatches: "इस प्रोफ़ाइल के लिए कोई सीधी केंद्रीय योजना नहीं मिली। विवरण बदलकर देखें या myscheme.gov.in पर सभी योजनाएँ देखें।",
     askTitle: "कोई सवाल? सहायक से पूछें",
-    askPlaceholder: "जैसे: आय प्रमाणपत्र कहाँ से बनेगा?",
+    askPlaceholder: "जैसे: इन योजनाओं के लिए आवेदन कैसे करूँ?",
     send: "पूछें", back: "फिर से शुरू करें",
     disclaimer: "योजना नियम समय-समय पर बदलते हैं। आवेदन से पहले आधिकारिक पोर्टल पर अवश्य जाँच करें। यह उपकरण मार्गदर्शन देता है, सरकारी निर्णय नहीं।",
     aiBadge: "AI-व्यक्तिगत मार्गदर्शन", engineBadge: "नियम-इंजन द्वारा पात्रता जाँची गई"
@@ -91,7 +91,7 @@ export const T = {
     docTip: "పత్రాల చిట్కా", official: "అధికారిక వెబ్‌సైట్",
     noMatches: "ఈ ప్రొఫైల్‌కు నేరుగా సరిపోయే కేంద్ర పథకం కనబడలేదు. వివరాలు మార్చి చూడండి లేదా myscheme.gov.in చూడండి.",
     askTitle: "ప్రశ్న ఉందా? సహాయక్‌ని అడగండి",
-    askPlaceholder: "ఉదా: ఆదాయ ధృవీకరణ పత్రం ఎక్కడ వస్తుంది?",
+    askPlaceholder: "ఉదా: ఈ పథకాలకు ఎలా దరఖాస్తు చేయాలి?",
     send: "అడగండి", back: "మళ్ళీ ప్రారంభించండి",
     disclaimer: "పథక నియమాలు మారుతుంటాయి. దరఖాస్తుకు ముందు అధికారిక పోర్టల్‌లో తప్పక ధృవీకరించుకోండి. ఇది మార్గదర్శకత్వం మాత్రమే, ప్రభుత్వ నిర్ణయం కాదు.",
     aiBadge: "AI-వ్యక్తిగత మార్గదర్శకత్వం", engineBadge: "రూల్స్ ఇంజిన్ ద్వారా అర్హత తనిఖీ"

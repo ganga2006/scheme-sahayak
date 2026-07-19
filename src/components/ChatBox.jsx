@@ -1,15 +1,18 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 
-/** Starter questions per language — one tap to ask (also great for demos). */
+/**
+ * Starter questions per language — one tap to ask (also great for demos).
+ * Built from the citizen's matched schemes so the grounded bot can always answer.
+ */
 const SUGGESTIONS = {
-  en: ["Where do I get an income certificate?", "What documents do I need first?", "Can I apply at a CSC centre?"],
-  hi: ["आय प्रमाणपत्र कहाँ से बनेगा?", "सबसे पहले कौन से दस्तावेज़ चाहिए?", "क्या मैं CSC केंद्र पर आवेदन कर सकता हूँ?"],
-  te: ["ఆదాయ ధృవీకరణ పత్రం ఎక్కడ వస్తుంది?", "ముందుగా ఏ పత్రాలు కావాలి?", "CSC కేంద్రంలో దరఖాస్తు చేయవచ్చా?"]
+  en: (s) => [`How do I apply for ${s}?`, `What documents do I need for ${s}?`, "Which of my schemes gives the biggest benefit?"],
+  hi: (s) => [`${s} के लिए आवेदन कैसे करूँ?`, `${s} के लिए कौन से दस्तावेज़ चाहिए?`, "मेरी योजनाओं में सबसे ज़्यादा लाभ किसमें है?"],
+  te: (s) => [`${s} కోసం ఎలా దరఖాస్తు చేయాలి?`, `${s} కోసం ఏ పత్రాలు కావాలి?`, "నా పథకాల్లో ఎక్కువ లాభం ఏది?"]
 };
 
 const REQUEST_TIMEOUT_MS = 30000;
 
-export default function ChatBox({ t, lang, profile, matchedIds }) {
+export default function ChatBox({ t, lang, profile, matchedIds, topScheme }) {
   const [history, setHistory] = useState([]);
   const [q, setQ] = useState("");
   const [busy, setBusy] = useState(false);
@@ -82,7 +85,7 @@ export default function ChatBox({ t, lang, profile, matchedIds }) {
     }
   }, [busy, lang, profile, matchedIds, history]);
 
-  const suggestions = SUGGESTIONS[lang] || SUGGESTIONS.en;
+  const suggestions = (SUGGESTIONS[lang] || SUGGESTIONS.en)(topScheme || "PM-KISAN");
 
   return (
     <div className="chat">

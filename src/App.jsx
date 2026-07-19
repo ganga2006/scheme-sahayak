@@ -114,7 +114,7 @@ export default function App() {
               <div className="cards">
                 {results.matches.map((m) => <SchemeCard key={m.id} m={m} t={t} />)}
               </div>
-              <ChatBox t={t} lang={lang} profile={profile} matchedIds={results.matches.map((m) => m.id)} />
+              <ChatBox t={t} lang={lang} profile={profile} matchedIds={results.matches.map((m) => m.id)} topScheme={results.matches[0]?.name} />
             </>
           )}
         </section>
