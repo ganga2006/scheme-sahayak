@@ -6,7 +6,9 @@ export default function ChatBox({ t, lang, profile, matchedIds }) {
   const [busy, setBusy] = useState(false);
   const endRef = useRef(null);
 
-  useEffect(() => endRef.current?.scrollIntoView({ behavior: "smooth" }), [history]);
+  useEffect(() => {
+    endRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [history]);
 
   async function ask(e) {
     e.preventDefault();
@@ -44,7 +46,7 @@ export default function ChatBox({ t, lang, profile, matchedIds }) {
         <div ref={endRef} />
       </div>
       <form className="chat-input" onSubmit={ask}>
-        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={t.askPlaceholder} maxLength={500} />
+        <input id="chat-question" name="question" autoComplete="off" value={q} onChange={(e) => setQ(e.target.value)} placeholder={t.askPlaceholder} maxLength={500} />
         <button type="submit" disabled={busy}>{t.send}</button>
       </form>
     </div>

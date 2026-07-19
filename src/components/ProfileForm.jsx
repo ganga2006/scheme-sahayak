@@ -23,36 +23,36 @@ export default function ProfileForm({ t, onSubmit, initial }) {
     <form className="form" onSubmit={submit}>
       <div className="grid2">
         <label>{t.age}
-          <input type="number" min="0" max="120" required value={f.age} onChange={set("age")} placeholder="35" />
+          <input id="age" name="age" type="number" min="0" max="120" required value={f.age} onChange={set("age")} placeholder="35" />
         </label>
         <label>{t.gender}
-          <select value={f.gender} onChange={set("gender")}>
+          <select id="gender" name="gender" value={f.gender} onChange={set("gender")}>
             <option value="female">{t.female}</option>
             <option value="male">{t.male}</option>
             <option value="other">{t.other}</option>
           </select>
         </label>
         <label>{t.state}
-          <select value={f.state} onChange={set("state")}>
+          <select id="state" name="state" value={f.state} onChange={set("state")}>
             {STATES.map((s) => <option key={s} value={s}>{s}</option>)}
           </select>
         </label>
         <label>{t.residence}
-          <select value={f.residence} onChange={set("residence")}>
+          <select id="residence" name="residence" value={f.residence} onChange={set("residence")}>
             <option value="rural">{t.rural}</option>
             <option value="urban">{t.urban}</option>
           </select>
         </label>
         <label>{t.occupation}
-          <select value={f.occupation} onChange={set("occupation")}>
+          <select id="occupation" name="occupation" value={f.occupation} onChange={set("occupation")}>
             {OCCUPATIONS.map((o) => <option key={o} value={o}>{t.occupations[o]}</option>)}
           </select>
         </label>
         <label>{t.income}
-          <input type="number" min="0" required value={f.incomeAnnual} onChange={set("incomeAnnual")} placeholder="120000" />
+          <input id="incomeAnnual" name="incomeAnnual" type="number" min="0" required value={f.incomeAnnual} onChange={set("incomeAnnual")} placeholder="120000" />
         </label>
         <label>{t.category}
-          <select value={f.category} onChange={set("category")}>
+          <select id="category" name="category" value={f.category} onChange={set("category")}>
             <option value="general">General</option>
             <option value="obc">OBC</option>
             <option value="sc">SC</option>
@@ -60,7 +60,7 @@ export default function ProfileForm({ t, onSubmit, initial }) {
           </select>
         </label>
         <label>{t.maritalStatus}
-          <select value={f.maritalStatus} onChange={set("maritalStatus")}>
+          <select id="maritalStatus" name="maritalStatus" value={f.maritalStatus} onChange={set("maritalStatus")}>
             <option value="single">{t.single}</option>
             <option value="married">{t.married}</option>
             <option value="widowed">{t.widowed}</option>
@@ -69,9 +69,9 @@ export default function ProfileForm({ t, onSubmit, initial }) {
       </div>
 
       <div className="checks">
-        <label className="check"><input type="checkbox" checked={f.disability} onChange={set("disability")} /> {t.disability}</label>
-        <label className="check"><input type="checkbox" checked={f.motherhood} onChange={set("motherhood")} /> {t.motherhood}</label>
-        <label className="check"><input type="checkbox" checked={f.girlChild} onChange={set("girlChild")} /> {t.girlChild}</label>
+        <label className="check"><input id="disability" name="disability" type="checkbox" checked={f.disability} onChange={set("disability")} /> {t.disability}</label>
+        <label className="check"><input id="motherhood" name="motherhood" type="checkbox" checked={f.motherhood} onChange={set("motherhood")} /> {t.motherhood}</label>
+        <label className="check"><input id="girlChild" name="girlChild" type="checkbox" checked={f.girlChild} onChange={set("girlChild")} /> {t.girlChild}</label>
       </div>
 
       <button className="cta" type="submit">{t.find} →</button>
