@@ -68,7 +68,8 @@ Rules:
 - Be encouraging but honest. Always advise verifying details on the official portal before applying.
 Output strict JSON matching: {"summary": string, "guidance": [{"id": string, "why": string, "steps": [string], "docTip": string}]}
 - "summary": 2-3 sentences, personal, addressed to the citizen, naming their top 1-2 schemes.
-- For each scheme: "why" = 1-2 sentences on why THEY qualify and what they gain; "steps" = 3-4 short, concrete application steps (mention the official portal, CSC centre, or bank as appropriate); "docTip" = one practical tip about documents.`;
+- For each scheme: "why" = 1-2 sentences on why THEY qualify and what they gain; "steps" = 3 short, concrete application steps (mention the official portal, CSC centre, or bank as appropriate); "docTip" = one practical tip about documents.
+- BE CONCISE: each step under 12 words, docTip under 15 words. Total output must stay well-formed JSON.`;
 
   const user = `Citizen profile: ${JSON.stringify(profile)}
 Matched schemes (from the eligibility engine): ${JSON.stringify(schemeContext)}
