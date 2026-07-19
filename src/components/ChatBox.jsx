@@ -4,11 +4,16 @@ export default function ChatBox({ t, lang, profile, matchedIds }) {
   const [history, setHistory] = useState([]);
   const [q, setQ] = useState("");
   const [busy, setBusy] = useState(false);
-  const endRef = useRef(null);
+  const logRef = useRef(null);
 
+  // Scroll the chat log via scrollTop (never scrollIntoView — browser
+  // extensions sometimes monkey-patch it and break React's commit phase).
   useEffect(() => {
-    endRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [history]);
+    try {
+      const el = logRef.current;
+      if (el) el.scrollTop = el.scrollHeight;
+    } catch { /* scrolling is cosmetic — never let it crash the UI */ }
+  }, [history, busy]);
 
   async function ask(e) {
     e.preventDefault();
@@ -38,12 +43,11 @@ export default function ChatBox({ t, lang, profile, matchedIds }) {
   return (
     <div className="chat">
       <h3>{t.askTitle}</h3>
-      <div className="chat-log">
+      <div className="chat-log" ref={logRef}>
         {history.map((m, i) => (
           <div key={i} className={`msg ${m.role}`}>{m.text}</div>
         ))}
         {busy && <div className="msg ai typing">•••</div>}
-        <div ref={endRef} />
       </div>
       <form className="chat-input" onSubmit={ask}>
         <input id="chat-question" name="question" autoComplete="off" value={q} onChange={(e) => setQ(e.target.value)} placeholder={t.askPlaceholder} maxLength={500} />
