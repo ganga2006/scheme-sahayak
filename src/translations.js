@@ -1,0 +1,106 @@
+/** UI strings in English, Hindi, Telugu. AI content is generated in the chosen language server-side. */
+export const T = {
+  en: {
+    appName: "Scheme Sahayak",
+    tagline: "Find the government schemes you deserve — in your language",
+    start: "Check My Schemes",
+    langPrompt: "Choose your language / अपनी भाषा चुनें / మీ భాషను ఎంచుకోండి",
+    formTitle: "Tell us about yourself",
+    formHint: "Takes 1 minute. We use this only to check eligibility — nothing is stored.",
+    age: "Age", gender: "Gender", male: "Male", female: "Female", other: "Other",
+    state: "State", residence: "Where do you live?", rural: "Village (Rural)", urban: "Town / City (Urban)",
+    occupation: "Occupation", income: "Annual household income (₹)",
+    category: "Category", maritalStatus: "Marital status",
+    single: "Single", married: "Married", widowed: "Widowed",
+    disability: "I have a disability (40%+ certified)",
+    motherhood: "I am pregnant or recently became a mother",
+    girlChild: "I have a daughter below 10 years",
+    occupations: {
+      farmer: "Farmer", "street-vendor": "Street vendor", artisan: "Artisan / craftsperson",
+      "self-employed": "Self-employed / small business", salaried: "Salaried job",
+      "daily-wage": "Daily-wage worker", student: "Student", homemaker: "Homemaker", unemployed: "Unemployed"
+    },
+    find: "Find My Schemes",
+    checking: "Checking 21 schemes and preparing your guidance…",
+    resultsTitle: "Schemes you may be eligible for",
+    whyYou: "Why you qualify", howToApply: "How to apply", documents: "Documents needed",
+    docTip: "Document tip", official: "Official website",
+    noMatches: "No direct central-scheme matches found for this profile. Try adjusting details, or explore all schemes at myscheme.gov.in.",
+    askTitle: "Have a question? Ask Sahayak",
+    askPlaceholder: "e.g. Where do I get an income certificate?",
+    send: "Ask", back: "Start over",
+    disclaimer: "Scheme rules change over time. Always verify on the official portal before applying. This tool gives guidance, not a government decision.",
+    aiBadge: "AI-personalised guidance", engineBadge: "eligibility checked by rules engine"
+  },
+  hi: {
+    appName: "स्कीम सहायक",
+    tagline: "जानिए आपको कौन-सी सरकारी योजनाओं का लाभ मिल सकता है — आपकी भाषा में",
+    start: "मेरी योजनाएँ देखें",
+    langPrompt: "अपनी भाषा चुनें / Choose your language / మీ భాషను ఎంచుకోండి",
+    formTitle: "अपने बारे में बताइए",
+    formHint: "सिर्फ 1 मिनट लगेगा। जानकारी केवल पात्रता जाँच के लिए है — कुछ भी सेव नहीं होता।",
+    age: "उम्र", gender: "लिंग", male: "पुरुष", female: "महिला", other: "अन्य",
+    state: "राज्य", residence: "आप कहाँ रहते हैं?", rural: "गाँव (ग्रामीण)", urban: "कस्बा / शहर (शहरी)",
+    occupation: "पेशा", income: "वार्षिक पारिवारिक आय (₹)",
+    category: "श्रेणी", maritalStatus: "वैवाहिक स्थिति",
+    single: "अविवाहित", married: "विवाहित", widowed: "विधवा/विधुर",
+    disability: "मुझे दिव्यांगता है (40%+ प्रमाणित)",
+    motherhood: "मैं गर्भवती हूँ या हाल ही में माँ बनी हूँ",
+    girlChild: "मेरी 10 वर्ष से छोटी बेटी है",
+    occupations: {
+      farmer: "किसान", "street-vendor": "रेहड़ी-पटरी विक्रेता", artisan: "कारीगर / शिल्पकार",
+      "self-employed": "स्वरोज़गार / छोटा व्यवसाय", salaried: "वेतनभोगी नौकरी",
+      "daily-wage": "दिहाड़ी मज़दूर", student: "विद्यार्थी", homemaker: "गृहिणी", unemployed: "बेरोज़गार"
+    },
+    find: "मेरी योजनाएँ खोजें",
+    checking: "21 योजनाओं की जाँच हो रही है, आपका मार्गदर्शन तैयार हो रहा है…",
+    resultsTitle: "आप इन योजनाओं के पात्र हो सकते हैं",
+    whyYou: "आप क्यों पात्र हैं", howToApply: "आवेदन कैसे करें", documents: "आवश्यक दस्तावेज़",
+    docTip: "दस्तावेज़ सुझाव", official: "आधिकारिक वेबसाइट",
+    noMatches: "इस प्रोफ़ाइल के लिए कोई सीधी केंद्रीय योजना नहीं मिली। विवरण बदलकर देखें या myscheme.gov.in पर सभी योजनाएँ देखें।",
+    askTitle: "कोई सवाल? सहायक से पूछें",
+    askPlaceholder: "जैसे: आय प्रमाणपत्र कहाँ से बनेगा?",
+    send: "पूछें", back: "फिर से शुरू करें",
+    disclaimer: "योजना नियम समय-समय पर बदलते हैं। आवेदन से पहले आधिकारिक पोर्टल पर अवश्य जाँच करें। यह उपकरण मार्गदर्शन देता है, सरकारी निर्णय नहीं।",
+    aiBadge: "AI-व्यक्तिगत मार्गदर्शन", engineBadge: "नियम-इंजन द्वारा पात्रता जाँची गई"
+  },
+  te: {
+    appName: "స్కీమ్ సహాయక్",
+    tagline: "మీకు అర్హత ఉన్న ప్రభుత్వ పథకాలను తెలుసుకోండి — మీ భాషలో",
+    start: "నా పథకాలు చూడండి",
+    langPrompt: "మీ భాషను ఎంచుకోండి / Choose your language / अपनी भाषा चुनें",
+    formTitle: "మీ గురించి చెప్పండి",
+    formHint: "1 నిమిషం చాలు. ఈ సమాచారం అర్హత తనిఖీకి మాత్రమే — ఏదీ నిల్వ చేయబడదు.",
+    age: "వయస్సు", gender: "లింగం", male: "పురుషుడు", female: "స్త్రీ", other: "ఇతర",
+    state: "రాష్ట్రం", residence: "మీరు ఎక్కడ నివసిస్తున్నారు?", rural: "గ్రామం (గ్రామీణ)", urban: "పట్టణం / నగరం",
+    occupation: "వృత్తి", income: "వార్షిక కుటుంబ ఆదాయం (₹)",
+    category: "వర్గం", maritalStatus: "వైవాహిక స్థితి",
+    single: "అవివాహిత", married: "వివాహిత", widowed: "వితంతువు",
+    disability: "నాకు వైకల్యం ఉంది (40%+ ధృవీకరించబడింది)",
+    motherhood: "నేను గర్భవతిని లేదా ఇటీవల తల్లినయ్యాను",
+    girlChild: "నాకు 10 ఏళ్లలోపు కుమార్తె ఉంది",
+    occupations: {
+      farmer: "రైతు", "street-vendor": "వీధి వ్యాపారి", artisan: "చేతివృత్తి కళాకారుడు",
+      "self-employed": "స్వయం ఉపాధి / చిన్న వ్యాపారం", salaried: "జీతం ఉద్యోగం",
+      "daily-wage": "దినసరి కూలీ", student: "విద్యార్థి", homemaker: "గృహిణి", unemployed: "నిరుద్యోగి"
+    },
+    find: "నా పథకాలను కనుగొనండి",
+    checking: "21 పథకాలను తనిఖీ చేస్తున్నాం, మీ మార్గదర్శకత్వం సిద్ధమవుతోంది…",
+    resultsTitle: "మీకు అర్హత ఉండవచ్చు అనిపించే పథకాలు",
+    whyYou: "మీరు ఎందుకు అర్హులు", howToApply: "ఎలా దరఖాస్తు చేయాలి", documents: "అవసరమైన పత్రాలు",
+    docTip: "పత్రాల చిట్కా", official: "అధికారిక వెబ్‌సైట్",
+    noMatches: "ఈ ప్రొఫైల్‌కు నేరుగా సరిపోయే కేంద్ర పథకం కనబడలేదు. వివరాలు మార్చి చూడండి లేదా myscheme.gov.in చూడండి.",
+    askTitle: "ప్రశ్న ఉందా? సహాయక్‌ని అడగండి",
+    askPlaceholder: "ఉదా: ఆదాయ ధృవీకరణ పత్రం ఎక్కడ వస్తుంది?",
+    send: "అడగండి", back: "మళ్ళీ ప్రారంభించండి",
+    disclaimer: "పథక నియమాలు మారుతుంటాయి. దరఖాస్తుకు ముందు అధికారిక పోర్టల్‌లో తప్పక ధృవీకరించుకోండి. ఇది మార్గదర్శకత్వం మాత్రమే, ప్రభుత్వ నిర్ణయం కాదు.",
+    aiBadge: "AI-వ్యక్తిగత మార్గదర్శకత్వం", engineBadge: "రూల్స్ ఇంజిన్ ద్వారా అర్హత తనిఖీ"
+  }
+};
+
+export const STATES = [
+  "Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chhattisgarh","Goa","Gujarat","Haryana",
+  "Himachal Pradesh","Jharkhand","Karnataka","Kerala","Madhya Pradesh","Maharashtra","Manipur",
+  "Meghalaya","Mizoram","Nagaland","Odisha","Punjab","Rajasthan","Sikkim","Tamil Nadu","Telangana",
+  "Tripura","Uttar Pradesh","Uttarakhand","West Bengal","Delhi","Jammu & Kashmir","Ladakh","Puducherry","Other UT"
+];
