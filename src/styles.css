@@ -131,3 +131,14 @@ input:focus, select:focus { outline: none; border-color: var(--saffron); }
   background: #fdecea; color: #b3261e; border: 1px solid #f5c6c2;
   padding: 10px 14px; border-radius: 10px; margin-bottom: 14px; font-size: 14px;
 }
+
+/* Chat suggestion chips & retry */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.chip {
+  background: #fff7ef; border: 1.5px solid var(--line); color: var(--ink);
+  padding: 8px 14px; border-radius: 20px; font-size: 13.5px; cursor: pointer;
+  font-family: inherit; transition: all 0.15s ease;
+}
+.chip:hover { border-color: var(--saffron); background: #fff0e3; }
+.chip:disabled { opacity: 0.5; cursor: default; }
+.chip.retry { margin-bottom: 12px; border-color: var(--saffron); color: var(--saffron-dark); }
