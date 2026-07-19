@@ -103,7 +103,7 @@ export default function App() {
             <div className="panel"><p>{t.noMatches}</p></div>
           ) : (
             <>
-              {results.summary && (
+              {typeof results.summary === "string" && results.summary && (
                 <div className="summary">
                   <span className="badge ai">✨ {t.aiBadge}</span>
                   <p>{results.summary}</p>

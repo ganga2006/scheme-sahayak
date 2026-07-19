@@ -12,6 +12,29 @@ import { geminiGenerate, parseModelJson } from "../lib/gemini.js";
 
 const LANG_NAMES = { en: "English", hi: "Hindi (Devanagari script)", te: "Telugu (Telugu script)" };
 
+/** Coerce whatever the model returned into safe, render-ready strings. */
+function asText(v) {
+  if (v == null) return null;
+  if (typeof v === "string") return v;
+  if (typeof v === "number" || typeof v === "boolean") return String(v);
+  if (Array.isArray(v)) return v.map(asText).filter(Boolean).join(" ");
+  if (typeof v === "object") return Object.values(v).map(asText).filter(Boolean).join(" ");
+  return null;
+}
+
+function sanitizeAi(raw) {
+  if (!raw || typeof raw !== "object") return null;
+  const guidance = (Array.isArray(raw.guidance) ? raw.guidance : [])
+    .filter((g) => g && typeof g === "object" && g.id)
+    .map((g) => ({
+      id: String(g.id),
+      why: asText(g.why),
+      steps: (Array.isArray(g.steps) ? g.steps : []).map(asText).filter(Boolean),
+      docTip: asText(g.docTip)
+    }));
+  return { summary: asText(raw.summary), guidance };
+}
+
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "POST only" });
 
@@ -54,7 +77,7 @@ Generate the JSON guidance now.`;
   let ai = null;
   let aiError = null;
   try {
-    ai = parseModelJson(await geminiGenerate({ system, user, json: true }));
+    ai = sanitizeAi(parseModelJson(await geminiGenerate({ system, user, json: true })));
   } catch (e) {
     console.error("Gemini personalisation failed:", e.message);
     aiError = "AI guidance temporarily unavailable — showing verified scheme information.";
