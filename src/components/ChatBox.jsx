@@ -21,8 +21,11 @@ export default function ChatBox({ t, lang, profile, matchedIds }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question, language: lang, profile, matchedSchemeIds: matchedIds, history })
       });
-      const data = await res.json();
-      setHistory((h) => [...h, { role: "ai", text: data.answer || data.error }]);
+      const data = await res.json().catch(() => ({}));
+      const text = (typeof data.answer === "string" && data.answer) ||
+                   (typeof data.error === "string" && data.error) ||
+                   "⚠️ No response — please try again.";
+      setHistory((h) => [...h, { role: "ai", text }]);
     } catch {
       setHistory((h) => [...h, { role: "ai", text: "⚠️ Network error — please try again." }]);
     } finally {

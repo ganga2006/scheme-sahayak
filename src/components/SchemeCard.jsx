@@ -9,16 +9,18 @@ export default function SchemeCard({ m, t }) {
 
       {m.ai ? (
         <div className="ai-block">
-          <p className="why"><strong>{t.whyYou}:</strong> {m.ai.why}</p>
-          <div className="steps">
-            <strong>{t.howToApply}:</strong>
-            <ol>{m.ai.steps.map((s, i) => <li key={i}>{s}</li>)}</ol>
-          </div>
-          {m.ai.docTip && <p className="doctip">💡 <strong>{t.docTip}:</strong> {m.ai.docTip}</p>}
+          {m.ai.why && <p className="why"><strong>{t.whyYou}:</strong> {String(m.ai.why)}</p>}
+          {Array.isArray(m.ai.steps) && m.ai.steps.length > 0 && (
+            <div className="steps">
+              <strong>{t.howToApply}:</strong>
+              <ol>{m.ai.steps.map((s, i) => <li key={i}>{String(s)}</li>)}</ol>
+            </div>
+          )}
+          {m.ai.docTip && <p className="doctip">💡 <strong>{t.docTip}:</strong> {String(m.ai.docTip)}</p>}
         </div>
       ) : (
         <ul className="reasons">
-          {m.engineReasons.map((r, i) => <li key={i}>✓ {r}</li>)}
+          {(m.engineReasons || []).map((r, i) => <li key={i}>✓ {r}</li>)}
         </ul>
       )}
 
